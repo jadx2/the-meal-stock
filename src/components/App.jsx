@@ -1,10 +1,18 @@
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navbar from './Navbar';
+import Home from '../containers/Home';
 import './styles/App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <h1>The meal stock</h1>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </Router>
+    </>
   );
 }
 
