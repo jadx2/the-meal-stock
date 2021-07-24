@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './Navbar';
-import Home from '../containers/Home';
+import listHolder from '../containers/listHolder';
 import './styles/App.scss';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={listHolder} />
         </Switch>
       </Router>
     </>

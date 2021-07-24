@@ -1,16 +1,15 @@
 import axios from 'axios';
-import GET_RECIPES from './types';
+import { GET_CATEGORIES } from './types';
 
-const getRecipes = (dispatch) => {
-  axios
-    .get('https://www.themealdb.com/api/json/v1/1/random.php')
-    .then((res) => res.json())
-    .then((recipe) =>
-      dispatch({
-        type: GET_RECIPES,
-        payload: recipe,
-      }),
-    );
+/* eslint-disable implicit-arrow-linebreak */
+/* eslint-disable function-paren-newline */
+const getCategories = () => (dispatch) => {
+  axios.get('https://www.themealdb.com/api/json/v1/1/categories.php').then((data) =>
+    dispatch({
+      type: GET_CATEGORIES,
+      payload: data.data.categories,
+    }),
+  );
 };
-
-export default getRecipes;
+/* eslint-enable */
+export default getCategories;
