@@ -1,10 +1,10 @@
-import { GET_CATEGORIES } from '../actions/types';
+import { GET_SECTION } from '../actions/types';
 
 const dataReducer = (state = [], action) => {
   let newState = [...state];
 
   switch (action.type) {
-    case GET_CATEGORIES:
+    case GET_SECTION:
       newState = action.payload;
 
       return newState;

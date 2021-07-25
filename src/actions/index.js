@@ -1,15 +1,25 @@
 import axios from 'axios';
-import { GET_CATEGORIES } from './types';
+import { GET_SECTION, CHANGE_FILTER, CHANGE_LOADED } from './types';
 
-/* eslint-disable implicit-arrow-linebreak */
-/* eslint-disable function-paren-newline */
-const getCategories = () => (dispatch) => {
-  axios.get('https://www.themealdb.com/api/json/v1/1/categories.php').then((data) =>
+const getSection = (query) => (dispatch) => {
+  axios.get(`https://www.themealdb.com/api/json/v1/1/list.php?${query[0]}=list`).then((data) => {
+    const { meals } = data.data;
+    const mealsArr = meals.map((meal) => meal[query[1]]);
     dispatch({
-      type: GET_CATEGORIES,
-      payload: data.data.categories,
-    }),
-  );
+      type: GET_SECTION,
+      payload: mealsArr,
+    });
+  });
 };
-/* eslint-enable */
-export default getCategories;
+
+const changeFilter = (filter) => ({
+  type: CHANGE_FILTER,
+  payload: filter,
+});
+
+const changeLoaded = (loaded) => ({
+  type: CHANGE_LOADED,
+  payload: loaded,
+});
+
+export { getSection, changeFilter, changeLoaded };
