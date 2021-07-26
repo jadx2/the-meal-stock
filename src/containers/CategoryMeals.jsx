@@ -13,10 +13,6 @@ const CategoryMeals = () => {
     dispatch(getByCategory(category));
   }, []);
 
-  // useEffect(() => {
-  //   console.log(meals);
-  // });
-
   return (
     <div className="container">
       <div className="cards">

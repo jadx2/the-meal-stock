@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getByIngredient } from '../actions';
+import Card from '../components/Cards';
 
 const IngredientMeals = () => {
   const dispatch = useDispatch();
@@ -12,14 +13,19 @@ const IngredientMeals = () => {
     dispatch(getByIngredient(ingredient));
   }, []);
 
-  useEffect(() => {
-    console.log(meals);
-  });
-
   return (
-    <>
-      <h1>Ingredient</h1>
-    </>
+    <div className="container">
+      <div className="cards">
+        {meals.map((meal) => (
+          <Card
+            key={meal.idMeal}
+            name={meal.strMeal}
+            image={meal.strMealThumb}
+            endPoint={`/meal/${meal.idMeal}`}
+          />
+        ))}
+      </div>
+    </div>
   );
 };
 

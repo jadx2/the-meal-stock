@@ -46,7 +46,6 @@ const getByIngredient = (ingredient) => (dispatch) => {
 };
 
 const getMealById = (id) => (dispatch) => {
-  console.log(`actions: ${id}`);
   axios
     .get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
     .then((data) => {
