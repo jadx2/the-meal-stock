@@ -1,8 +1,8 @@
 const sectionSelector = (filter) => {
   switch (filter) {
-    case 'category':
+    case 'categories':
       return ['c', 'strCategory'];
-    case 'ingredient':
+    case 'ingredients':
       return ['i', 'strIngredient'];
     default:
       return ['c', 'strCategory'];

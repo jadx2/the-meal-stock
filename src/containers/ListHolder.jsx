@@ -3,12 +3,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getSection, changeFilter } from '../actions';
 import sectionSelector from '../helpers/sectionSelector';
 import getImage from '../helpers/getImage';
-import Card from '../components/cards';
+import Card from '../components/Cards';
 import Filter from '../components/Filter';
 
 const ListHolder = () => {
   const dispatch = useDispatch();
-  const data = useSelector((state) => state.data);
+  const data = useSelector((state) => state.data.slice(0, 20));
   const filter = useSelector((state) => state.filter);
 
   useEffect(() => {
@@ -19,6 +19,10 @@ const ListHolder = () => {
     dispatch(changeFilter(e.target.value));
   };
 
+  // useEffect(() => {
+  //   console.log(data.map((item) => item));
+  // });
+
   return (
     <main className="main">
       <div className="container">
@@ -27,7 +31,12 @@ const ListHolder = () => {
         </div>
         <div className="cards">
           {data.map((item) => (
-            <Card key={item} name={item} image={getImage(item, filter)} />
+            <Card
+              key={item}
+              name={item}
+              image={getImage(item, filter)}
+              endPoint={`/${filter}/${item}`}
+            />
           ))}
         </div>
       </div>

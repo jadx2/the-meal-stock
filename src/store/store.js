@@ -4,17 +4,21 @@ import rootReducer from '../reducers';
 
 const initialState = {
   data: [],
-  filter: 'category',
+  meals: [],
+  meal: {},
+  filter: 'categories',
   loaded: false,
 };
 
 /* eslint-disable no-underscore-dangle */
+/* eslint-disable operator-linebreak */
 const store = createStore(
   rootReducer,
   initialState,
   compose(
     applyMiddleware(thunk),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    window.__REDUX_DEVTOOLS_EXTENSION__ &&
+      window.__REDUX_DEVTOOLS_EXTENSION__(),
   ),
 );
 /* eslint-enable */

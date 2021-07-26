@@ -5,20 +5,27 @@ const Filter = (props) => {
 
   return (
     <>
-      <label htmlFor="category">
+      <label htmlFor="categories">
         Category
         <input
           type="radio"
           id="category"
           name="filter"
           onChange={onChange}
-          value="category"
-          checked={filter === 'category'}
+          value="categories"
+          checked={filter === 'categories'}
         />
       </label>
-      <label htmlFor="ingredient">
+      <label htmlFor="ingredients">
         Ingredient
-        <input type="radio" id="ingredient" name="filter" onChange={onChange} value="ingredient" />
+        <input
+          type="radio"
+          id="ingredients"
+          name="filter"
+          onChange={onChange}
+          value="ingredients"
+          checked={filter === 'ingredients'}
+        />
       </label>
     </>
   );
@@ -26,7 +33,11 @@ const Filter = (props) => {
 
 Filter.propTypes = {
   onChange: PropTypes.func.isRequired,
-  filter: PropTypes.string.isRequired,
+  filter: PropTypes.string,
+};
+
+Filter.defaultProps = {
+  filter: 'categories',
 };
 
 export default Filter;
