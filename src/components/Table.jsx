@@ -4,11 +4,11 @@ const Table = (props) => {
   const { ingredients } = props;
 
   return (
-    <table>
+    <table className="table">
       <thead>
         <tr>
-          <td>Ingredient</td>
-          <td>Measurement</td>
+          <td>Ingredients</td>
+          <td>Measure</td>
         </tr>
       </thead>
       <tbody>

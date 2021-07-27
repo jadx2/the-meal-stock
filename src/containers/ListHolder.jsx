@@ -19,10 +19,6 @@ const ListHolder = () => {
     dispatch(changeFilter(e.target.value));
   };
 
-  // useEffect(() => {
-  //   console.log(data.map((item) => item));
-  // });
-
   return (
     <main className="main">
       <div className="container">

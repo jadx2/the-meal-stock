@@ -15,6 +15,7 @@ const IngredientMeals = () => {
 
   return (
     <div className="container">
+      <h2>Meals</h2>
       <div className="cards">
         {meals.map((meal) => (
           <Card

@@ -4,7 +4,8 @@ const Filter = (props) => {
   const { onChange, filter } = props;
 
   return (
-    <>
+    <div className="filter">
+      Filter by:
       <label htmlFor="categories">
         Category
         <input
@@ -27,7 +28,7 @@ const Filter = (props) => {
           checked={filter === 'ingredients'}
         />
       </label>
-    </>
+    </div>
   );
 };
 

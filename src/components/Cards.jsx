@@ -9,7 +9,7 @@ const Card = (props) => {
       <figure className="card-image">
         <img src={image} alt="name" />
       </figure>
-      <h2>{name}</h2>
+      <h2 className="card-title">{name}</h2>
     </Link>
   );
 };

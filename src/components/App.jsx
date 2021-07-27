@@ -5,6 +5,7 @@ import './styles/App.scss';
 import CategoryMeals from '../containers/CategoryMeals';
 import IngredientMeals from '../containers/IngredientMeals';
 import Meal from '../containers/Meal';
+import NoMatch from '../containers/NoMatch';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/categories/:category" component={CategoryMeals} />
           <Route path="/ingredients/:ingredient" component={IngredientMeals} />
           <Route path="/meal/:id" component={Meal} />
+          <Route path="*" component={NoMatch} />
         </Switch>
       </Router>
     </>

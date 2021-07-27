@@ -6,6 +6,7 @@ import {
   GET_BY_CATEGORY,
   GET_BY_INGREDIENT,
   GET_MEAL_BY_ID,
+  GET_ERROR,
 } from './types';
 
 const getSection = (query) => (dispatch) => {
@@ -18,7 +19,8 @@ const getSection = (query) => (dispatch) => {
         type: GET_SECTION,
         payload: mealsArr,
       });
-    });
+    })
+    .catch((error) => ({ type: GET_ERROR, error }));
 };
 
 const getByCategory = (category) => (dispatch) => {
@@ -30,7 +32,8 @@ const getByCategory = (category) => (dispatch) => {
         type: GET_BY_CATEGORY,
         payload: meals,
       });
-    });
+    })
+    .catch((error) => ({ type: GET_ERROR, error }));
 };
 
 const getByIngredient = (ingredient) => (dispatch) => {
@@ -42,7 +45,8 @@ const getByIngredient = (ingredient) => (dispatch) => {
         type: GET_BY_INGREDIENT,
         payload: meals,
       });
-    });
+    })
+    .catch((error) => ({ type: GET_ERROR, error }));
 };
 
 const getMealById = (id) => (dispatch) => {
@@ -53,7 +57,8 @@ const getMealById = (id) => (dispatch) => {
         type: GET_MEAL_BY_ID,
         payload: data.data.meals[0],
       });
-    });
+    })
+    .catch((error) => ({ type: GET_ERROR, error }));
 };
 
 const changeFilter = (filter) => ({

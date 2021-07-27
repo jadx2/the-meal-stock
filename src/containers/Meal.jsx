@@ -15,15 +15,23 @@ const Meal = () => {
   }, []);
 
   return (
-    <div>
-      <h1>{meal.strMeal}</h1>
-      <div>
-        <figure>
+    <div className="container">
+      <h2 className="meal-title">{meal.strMeal}</h2>
+      <div className="meal-overview">
+        <figure className="meal-img">
           <img src={meal.strMealThumb} alt="" />
         </figure>
         <Table ingredients={formatIngredients(meal)} />
       </div>
-      <p>{meal.strInstructions}</p>
+      <p className="instructions">{meal.strInstructions}</p>
+      <a
+        href={meal.strSource}
+        className="source"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Original Recipe
+      </a>
     </div>
   );
 };

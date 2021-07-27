@@ -8,6 +8,7 @@ const initialState = {
   meal: {},
   filter: 'categories',
   loaded: false,
+  error: null,
 };
 
 /* eslint-disable no-underscore-dangle */
