@@ -7,7 +7,6 @@ const initialState = {
   meals: [],
   meal: {},
   filter: 'categories',
-  loaded: false,
   error: null,
 };
 

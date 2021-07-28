@@ -24,14 +24,18 @@ const Meal = () => {
         <Table ingredients={formatIngredients(meal)} />
       </div>
       <p className="instructions">{meal.strInstructions}</p>
-      <a
-        href={meal.strSource}
-        className="source"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Original Recipe
-      </a>
+      <p>
+        Find the original recipe
+        <span> </span>
+        <a
+          href={meal.strSource}
+          className="source"
+          target="_blank"
+          rel="noreferrer"
+        >
+          here
+        </a>
+      </p>
     </div>
   );
 };
