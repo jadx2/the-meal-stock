@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-[The Meal Stock Demo](https://jadx2-magic-books.herokuapp.com/)
+[The Meal Stock Demo](https://the-meal-stock.netlify.app/)
 
 ### Built With
 
