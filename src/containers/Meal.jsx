@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { getMealById } from '../actions';
 import formatIngredients from '../helpers/formatIngredients';
 import Table from '../components/Table';
@@ -36,6 +36,7 @@ const Meal = () => {
           here
         </a>
       </p>
+      <Link to="/">Go Home</Link>
     </div>
   );
 };

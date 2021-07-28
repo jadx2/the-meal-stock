@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getByCategory } from '../actions';
 import Card from '../components/Cards';
@@ -26,6 +26,7 @@ const CategoryMeals = () => {
           />
         ))}
       </div>
+      <Link to="/">Go Home</Link>
     </div>
   );
 };
