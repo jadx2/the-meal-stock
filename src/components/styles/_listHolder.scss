@@ -1,0 +1,13 @@
+.container {
+  width: 1300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  .cards {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
