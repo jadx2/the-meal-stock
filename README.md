@@ -45,12 +45,6 @@ git@github.com:jadx2/the-meal-stock.git
 https://github.com/jadx2/the-meal-stock.git
 ```
 
-- Move to the temporary feature branch:
-
-```
-git checkout the-meal-stock
-```
-
 ### Usage
 
 - Install dependencies with yarn:
