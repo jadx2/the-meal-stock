@@ -1,0 +1,39 @@
+@import 'variables';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .meal-title {
+    margin-bottom: 2rem;
+  }
+
+  .meal-overview {
+    display: flex;
+    margin-bottom: 2rem;
+
+    .meal-img {
+      width: 400px;
+      margin-right: 2rem;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .instructions {
+    width: 720px;
+    margin-bottom: 2rem;
+  }
+
+  .source {
+    color: $wine;
+    transition: $ease-out;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+}

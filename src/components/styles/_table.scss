@@ -1,0 +1,19 @@
+@import 'variables';
+
+.table {
+  border: 1px solid $blue;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: $shadow;
+
+  td {
+    width: 150px;
+    padding-left: 1rem;
+  }
+
+  thead {
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid $blue;
+  }
+}
