@@ -1,6 +1,6 @@
 # The Meal Stock
 
-> This is website where you can search for recipes from different parts of the world by category or ingredient. It is built in React-Redux. This is following the "Catalogue of Dog Clothes guideline".
+> In this website you can search for recipes from different parts of the world by category or ingredient. It is built in React-Redux. This is following the "Catalogue of Dog Clothes guideline".
 
 ![screenshot](./src/assets/images/screenshot.jpg)
 
